@@ -1,4 +1,38 @@
 body{
 background-color: #f4f4f4;
+font-family: Arial, Helvetica, Sans-serif;
+margin: 0;
+line-height: 1.6;
+}
+
+header, nav, main, footer {
+margin-width: 900ppx;
+padding: 20px;
+margin: auto;
+}
+
+section{
+margin-bottom: 40px;
+}
+
+nav ul{
+list-style: none;
+padding:0;
+}
+
+nav ul li{
+display: inline-block;
+margin-right: 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #333;
+font-weight: bold;
+}
+
+
+nav ul li a:hover{
+color: #0077cc;
 }
 

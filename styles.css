@@ -5,6 +5,13 @@ margin: 0;
 line-height: 1.6;
 }
 
+main{
+max-width: 900px;
+padding: 20px;
+margin: auto;
+}
+
+
 header, nav, main, footer {
 margin-width: 900ppx;
 padding: 20px;
@@ -12,17 +19,33 @@ margin: auto;
 }
 
 section{
-margin-bottom: 40px;
+background: white;
+margin-bottom: 30px;
+border-radius: 8px;
+padding: 20px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+header{
+background: #222;
+padding: 30px 20px;
+text-align: center;
 }
 
 nav ul{
 list-style: none;
-padding:0;
+padding: 0;
+margin:0;
+display: flex;
+justify-content: center;
+gap: 50px;
+
 }
 
 nav ul li{
 display: inline-block;
-margin-right: 20px;
+
+margin: 0 15px;
 }
 
 nav ul li a {
@@ -36,3 +59,8 @@ nav ul li a:hover{
 color: #0077cc;
 }
 
+nav{
+background-color: white;
+padding: 15px 0;
+box-shadow:  0 2px 8px rgba(0,0,0,0.1);
+}

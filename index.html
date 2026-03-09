@@ -42,33 +42,86 @@
 </section>
 
 <section id="skills">
-<h3>Skills Section</h3>
-<p>Frontends: HTML, CSS, JavaScript</p>
-<p>Tools: Git, GitHub, Linux (Ubuntu)</p>
+<h3>Skills</h3>
+<div  class="skills-container">
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Git</div>
+<div class="skill">Linux</div>
+<div class="skill">Responsive Design</div>
+</div>
 </section>
 
 <section id="projects">
-<h3>Project Section</h3>
-<ul>
-<li>Frontend Rebuild 2026</li>
-<li><a href="https://github.com/cagashi/frontend-rebuild-2026" target="_blank">View Repository</li>
-</ul>
+<h3 class="section-title">Projects</h3>
+<div class="project-container">
+
+<div class="card">
+<h4>Frontend Rebuild 2026</h4>
+<p>A rebuilt responsive portfolio using modern CSS structure.</p>
+<a href="https://github.com/cagashi/frontend-rebuild-2026" target="_blank">View on GitHub</a>
+</div>
+
+<div class="card">
+<h4>Landing Page System</h4>
+<p>A clean marketing landing page layout built with flexbox.</p>
+<a href="#">View on GitHub</a>
+</div>
+
+<div class="card">
+<h4>Responsive Blog Layout</h4>
+<p>A responsive article layout with mobile-first CSS.</p>
+<a href="#">View on GitHub</a>
+</div>
+
+</div>
 </section>
 
+
 <section id="contact">
-<h3>Contact Section</h3>
-<ul>
-<li>Email: clkstine@gmail.com</li>
-<li>GitHub Profile:<a href="https://github.com/cagashi" target="_blank">View Profile</a> </li>
-</ul>
+<h3>Contact</h3>
+
+<p>Email: clkstine@gmail.com</p>
+<p>GitHub Profile:<a href="https://github.com/cagashi" target="_blank">View Profile</a> </p>
+
 
 </section>
 
 
 </main>
-<footer>Portfolio site - <a href="https://cagashi.github.io/frontend-rebuild-2026/" target="_blank">Click here to visit the page</a></footer>
+<footer>
+<p>&copy; 2026 Celestine Chukwuka Agashi</p>
+<p>Built with HTML, CSS  and Git</p>
+</footer>
 
 
 </body>
+<script>
+const sections = documnet.querySelectorAll("section");
+
+const navLinks = documnet.querySelectorAll("nav a");
+
+widnow.addEventListener("scroll", () =>{
+let current = "";
+
+sections.forEach(section =>{
+const sectionTop = section.offsetTop - 100;
+const sectionHeight = section.clientHeight;
+
+if(pageYoffset >= sectionTop){
+current = section.getAttribute("id")
+}
+});
+navLinks.forEach(link =>{
+link.classList.remove("active");
+if(link.getAttribute("href") === "#" + current){
+link.classList.add("active");
+}
+});
+});
+
+
+</script>
 
 </html>

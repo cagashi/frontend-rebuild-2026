@@ -11,12 +11,14 @@
 <header>
 <h1>Celestine Chukwuka Agashi</h1>
 
-<p style="color: grey; font-weight: bold">Full-Stack Developer (In Progress) | JavaScript | Linux | Git</p>
+<p>Full-Stack Developer (In Progress) | JavaScript | Linux | Git</p>
+<p class="hero-text">I build practical web applications using modern JavaScript and scalable development workflows.</p>
+<a href="#projects" class="hero-btn">View My Projects </a>
 </header>
 
 <nav>
-
-<ul>
+<div class="menu-toggle">☰</div>
+<ul class="nav-links">
 <li><a href="#home">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -98,18 +100,18 @@
 
 </body>
 <script>
-const sections = documnet.querySelectorAll("section");
+const sections = document.querySelectorAll("section");
 
-const navLinks = documnet.querySelectorAll("nav a");
+const navLinks = document.querySelectorAll("nav a");
 
-widnow.addEventListener("scroll", () =>{
+window.addEventListener("scroll", () =>{
 let current = "";
 
 sections.forEach(section =>{
 const sectionTop = section.offsetTop - 100;
 const sectionHeight = section.clientHeight;
 
-if(pageYoffset >= sectionTop){
+if(window.pageYOffset >= sectionTop){
 current = section.getAttribute("id")
 }
 });
@@ -121,7 +123,14 @@ link.classList.add("active");
 });
 });
 
+const toggle = document.querySelector(".menu-toggle");
+const nav = document.querySelector(".nav-links");
+toggle.addEventListener("click", function(){
+    nav.classList.toggle("active");
+});
 
+console.log("JavaScript is working");
 </script>
+
 
 </html>
